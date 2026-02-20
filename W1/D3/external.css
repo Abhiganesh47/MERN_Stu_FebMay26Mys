@@ -1,0 +1,22 @@
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+.box2{
+   /* margin: 30px; /* all 4 sides */
+    /*margin: 10px 30px; /* top 10 right:30 */
+    /*margin: 10px 30px 20px 50px; /* Top:10 Right:30 Bottom:20 Left:50 */
+    margin: auto; /* Centers horizontally */
+
+}
+
+body{
+    background-color: rgb(255, 255, 9);
+}
+.border{
+    border: 10px solid violet;
+    border-right: 10px dotted indigo;
+    border-bottom: 15px dashed indianred;
+    border-radius: 10px;
+}
