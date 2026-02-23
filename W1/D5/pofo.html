@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 15px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        /* hero section */
+        .hero {
+            text-align: left;
+            padding: 50px 20px;
+            background-color: skinwhite;
+        }
+        .profile-img {
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .cat-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* about section */
+        .about {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        .tags {
+            margin-top: 10px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        /* skills section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px;
+        }
+        .skill-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        /* projects section */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px;
+        }
+        .project-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        /* contact section */
+        .contact-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">ABHIGANESH R</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Flexbox Layout -->
+     <!-- Hero section -->
+    <section id="home" class="hero">
+        <h1>ABHIGANESH R</h1>
+        <img src="profile.jpg" alt="My photo" class="profile-img" height="150px" width="130px">
+        <p>Passionate developer and designer <br> </p>
+        <a href="#contact" class="cat-button">Get in Touch</a>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <H2>About Me</H2>
+        <article class="about">
+            <h3>Full Stack Developer</h3>
+            <p>Passionate developer and designer with experience in creating responsive websites and applications.</p>
+            <div class="tags">
+                <span class="tag">Backend:NodeJS</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </article>
+    </section>
+    <!-- Skill section -->
+    <section id="skills">
+        <h3>My Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>MERN Stack</h4>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+        </div>
+    </section>
+    <!-- project section -->
+    <section id="projects">
+        <h3>My Projects</h3>
+        <div class="projects-container">
+            <div class="project-content">
+                <h4>gola</h4>
+                <p>Rapid way to book a cab hassle free</p>
+                <a href="https://www.gola.com/" target="_blank">View Project</a>
+            </div>    
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th colspan="2">Technology</th>
+                </tr>
+            </thead>
+           <tbody>
+            <tr>
+                <td>AWS for hosting</td>
+                <td>MERN</td>
+                <td>Redis</td>
+            </tr>
+           </tbody>
+        </table>
+    </section>
+    <!--  contact section -->
+      <section id="contact">
+        <h3>Contact Me</h3>
+        <form class="contact-form">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+
+                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="name" id="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <select name="type" >
+                        <option value="fte">FTE</option>
+                        <option value="project">Project Proposal</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+</body>
+</html>
