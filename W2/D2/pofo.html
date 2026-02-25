@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio:tailwind</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="m-15 p-0 bg-gray-200 font-sans">
+    <header class="bg-purple-700 text-white py-10">
+        <nav class="display-flex justify-between items-center max-w-5xl mx-auto px-5">
+            <a  href="#home" class="text-xl font-bold">ABHIGANESH R</a>
+            <ul class="flex space-x-4">
+                <li class="ml-4"><a href="#home">Home</a></li>
+                <li class="ml-4"><a href="#about">About</a></li>
+                <li class="ml-4"><a href="#skills">Skills</a></li>
+                <li class="ml-4"><a href="#projects">Projects</a></li>
+                <li class="ml-4"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Flexbox Layout -->
+     <!-- Hero section -->
+    <section id="home" class="text-left p-12 bg-white">
+        <h1>ABHIGANESH R</h1>
+        <img src="profile.jpg " alt="My photo" class="rounded-full border-4 border-black" height="150px" width="130px">
+        <p>Passionate developer and designer <br> </p>
+        <a href="#contact" class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500">Get in Touch</a>
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <H2>About Me</H2>
+        <article class="bg-white p-6 rounded shadow-md">
+            <h3>Full Stack Developer</h3>
+            <p>Passionate developer and designer with experience in creating responsive websites and applications.</p>
+            <div class="mt-4">
+                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded mr-2">Backend:NodeJS</span>
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded mr-2">CSS</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded">JavaScript</span>
+            </div>
+        </article>
+    </section>
+    <!-- Skill section -->
+    <section id="skills">
+        <h3>My Skills</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-6 rounded shadow-md">
+                <h4>MERN Stack</h4>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+        </div>
+    </section>
+    <!-- project section -->
+    <section id="projects">
+        <h3>My Projects</h3>
+        <div class="bg-white p-6 rounded shadow-md">
+            <div class="bg-white p-6 rounded shadow-md">
+                <h4>gola</h4>
+                <p>Rapid way to book a cab hassle free</p>
+                <a href="https://www.gola.com/" target="_blank">View Project</a>
+            </div>    
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th colspan="2">Technology</th>
+                </tr>
+            </thead>
+           <tbody>
+            <tr>
+                <td>AWS for hosting</td>
+                <td>MERN</td>
+                <td>Redis</td>
+            </tr>
+           </tbody>
+        </table>
+    </section>
+    <!--  contact section -->
+      <section id="contact">
+        <h3>Contact Me</h3>
+        <form class="bg-white p-6 rounded shadow-md">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <div class="mb-4">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+
+                 <div class="mb-4">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="mb-4">
+                    <select name="type" >
+                        <option value="fte">FTE</option>
+                        <option value="project">Project Proposal</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-500">Send Message</button>
+        </form>
+      </section>
+</body>
+</html>
