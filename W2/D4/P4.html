@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overlay: dim the Background</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main class="max-w-4xl mx-auto p-6 space-y-8">
+        <h1 class="text-2xl font-bold">Overlay text background</h1>
+        <section class="border rounded p-6 ">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="h-32 rounded bg-[linear-gradient(135deg,#6FD65A,#A1F084)]">Card 1</div>
+                <div class="h-32 rounded bg-[linear-gradient(135deg,#3A0752,#AC07ED)]">Card 2</div>
+                <p class="mt-4 text-lg">This is the content</p>
+            </div>
+        </section>
+        <div id="overlay" class=" fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-md">
+            <div class="w-[min(520px,92vw)] bg-white rounded p-6 shadow-lg">
+                <h2 class="text-lg font-bold">My Modal Window</h2>
+                <p class="text-sm mt-2">here is my second modal window that I created.</p>
+                <div class="mt-6 flex justify-end">
+                    <button id="closeBtn" class="px-4 py-2 rounded border hover:bg-red-500 transition">Close</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        // click the close button to hide the overlay
+        closeBtn.addEventListener("click", () => {
+            overlay.classList.remove("flex");
+            overlay.classList.add("hidden");
+        });
+
+        // click outside the modal to close
+        overlay.addEventListener('click', (e) => {
+            if (e.target.id === "overlay") {
+                overlay.classList.remove("flex");
+                overlay.classList.add("hidden");
+            }
+        });
+    </script>
+</body>
+
+</html>
