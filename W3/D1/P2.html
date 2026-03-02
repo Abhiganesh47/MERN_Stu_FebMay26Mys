@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: Variables</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 class="text-2xl font-bold">My first JavaScript</h1>
+    <button id="runBtn" class="px-3 py-1 rounded mt-2 mb-2 bg-gray-400 hover:bg-gray-900">
+        Run
+    </button>
+
+    <pre id="out">
+
+    </pre>
+    <script>
+        const out = document.getElementById("out");
+        function print(...args) {
+            // Console
+            console.log(...args);
+            out.textContent += args.join("") + "\n";
+        }
+        function clearOut() {
+            out.textContent = "";
+        }
+        function run() {
+            clearOut();
+            var a = 10;
+            var a = 20;
+            print("var a = ", a);
+
+            let b = 5;
+            b = 15;
+            // let b=25; //creates error if uncommented
+            print("let b = ", b);
+
+            const pi = 3.1415;
+            // pi=2.14556;
+            print("const pi = ", pi);
+        }
+        document.getElementById("runBtn").addEventListener("click", run);
+    </script>
+</body>
+
+</html>
