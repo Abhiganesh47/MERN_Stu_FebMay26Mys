@@ -8,8 +8,8 @@ let total = nums.reduce((intermediateSUM , current) => intermediateSUM + current
 
 // reduce to Object count by category
 let items =["pen","pencil","pen","eraser"];
-let count = items.reduce((wholeArray,item)=>{
-    wholeArray[item]=(wholeArray[item] || 0)+ 1;
-    return wholeArray;
+let count = items.reduce((IntermediateValue,item)=>{
+    IntermediateValue[item]=(IntermediateValue[item] || 0)+ 1;
+    return IntermediateValue;
 },{});
 console.log("Item count: ",count);
