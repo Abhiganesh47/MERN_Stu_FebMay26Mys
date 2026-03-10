@@ -6,6 +6,7 @@ let counter = 1;
 document.getElementById("addBtn").addEventListener("click", function () {
     const li = document.createElement("li");
     // list.textContent="";
+    errMessage.textContent =" ";
     li.textContent = "Text" + counter++;
     list.appendChild(li);
 });
@@ -15,6 +16,6 @@ document.getElementById("rmBtn").addEventListener("click", function () {
         list.removeChild(list.lastElementChild);
     }
     else{
-        list.textContent="no items"
+        errMessage.textContent ="No items";
     }
 });
