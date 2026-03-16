@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiganesh Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-gray-800 to-black text-white">
+    <!-- HERO -->
+    <section
+        class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 min-h-screen flex flex-col lg:flex-row lg:items-center lg:justify-between px-8 lg:px-20 py-20 gap-16 rounded-xl shadow-2xl">
+        <div class="order-2 lg:order-1 flex-1 lg:max-w-lg text-center lg:text-left">
+            <h1 class="text-6xl font-extrabold mb-6 tracking-wide">
+                Abhiganesh R
+            </h1>
+            <p class="text-lg lg:text-xl text-white/90 font-medium mb-10 max-w-lg">
+                B.E Student | Aspiring Cloud Engineer & Game Designer | Turning Ideas into Scalable & Playable
+                Experiences
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                <a href="#projects"
+                    class="bg-white text-black font-semibold px-10 py-4 rounded-xl shadow-lg hover:scale-105 hover:bg-gray-200 transition">
+                    View Projects
+                </a>
+                <a href="Abhiganesh_Resume.pdf"
+                    class="bg-black text-white px-10 py-4 rounded-xl shadow-lg hover:bg-gray-800 hover:scale-105 transition">
+                    Download Resume
+                </a>
+            </div>
+            <div class="flex flex-wrap gap-6 justify-center lg:justify-start text-sm font-bold text-white/80">
+                <span>79+ Github Commits</span>
+                <span>50 LeetCode Questions solved</span>
+                <span>Live Projects Completed</span>
+            </div>
+        </div>
+        <div class="order-1 lg:order-2 w-full lg:w-96 max-w-sm mx-auto">
+            <img src="pic.png" class="rounded-2xl shadow-2xl hover:scale-105 transition duration-300">
+        </div>
+    </section>
+    <!-- NAVBAR -->
+    <nav class="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#"
+                class="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                Abhiganesh R
+            </a>
+            <ul class="hidden md:flex items-center gap-10">
+                <li><a href="#projects" class="hover:text-pink-400 transition">Projects</a></li>
+                <li><a href="#experience" class="hover:text-pink-400 transition">Education</a></li>
+                <li><a href="#skills" class="hover:text-pink-400 transition">Skills</a></li>
+            </ul>
+            <a href="#contact" class="bg-pink-500 px-6 py-3 rounded-lg hover:bg-pink-600 transition">
+                Let's Connect
+            </a>
+        </div>
+    </nav>
+    <!-- PROJECTS -->
+    <section id="projects" class="bg-gradient-to-br from-slate-800 via-gray-900 to-black py-24 px-8 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">My Projects</h2>
+                <p class="text-lg text-gray-300">
+                    Enterprise-Grade Cloud Solutions
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- CARD-1 -->
+                <div
+                    class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-purple-500/40 transition-all">
+                    <h3 class="text-2xl font-bold mb-3">Movie Recommendation System</h3>
+                    <p class="text-gray-300 mb-6">
+                        Personalized movie suggestions using collaborative filtering and content-based recommendation
+                        techniques.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-500/20 px-3 py-1 rounded text-sm">React</span>
+                        <span class="bg-yellow-500/20 px-3 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-purple-500/20 px-3 py-1 rounded text-sm">MongoDB</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition">Live</a>
+                        <a class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-800 transition">Github</a>
+                    </div>
+                </div>
+                <!-- CARD-2 -->
+                <div
+                    class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-purple-500/40 transition-all">
+                    <h3 class="text-2xl font-bold mb-3">Gola Cloud Storage</h3>
+                    <p class="text-gray-300 mb-6">
+                        Cloud-based file storage platform with secure sharing and synchronization across devices.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-500/20 px-3 py-1 rounded text-sm">React</span>
+                        <span class="bg-yellow-500/20 px-3 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-purple-500/20 px-3 py-1 rounded text-sm">MongoDB</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition">Live</a>
+                        <a class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-800 transition">Github</a>
+                    </div>
+                </div>
+                <!-- CARD-3 -->
+                <div
+                    class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:-translate-y-3 hover:shadow-purple-500/40 transition-all">
+                    <h3 class="text-2xl font-bold mb-3">Med-Bot</h3>
+                    <p class="text-gray-300 mb-6">
+                        AI medical chatbot providing symptom analysis and preliminary health guidance using NLP.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-blue-500/20 px-3 py-1 rounded text-sm">React</span>
+                        <span class="bg-yellow-500/20 px-3 py-1 rounded text-sm">Node.js</span>
+                        <span class="bg-purple-500/20 px-3 py-1 rounded text-sm">API</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <a class="bg-green-500 px-4 py-2 rounded hover:bg-green-600 transition">Live</a>
+                        <a class="bg-gray-700 px-4 py-2 rounded hover:bg-gray-800 transition">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- EDUCATION -->
+    <section id="experience" class="py-24 px-8 lg:px-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl text-center mb-16 font-bold">
+                Education
+            </h2>
+            <div class="space-y-8">
+                <div
+                    class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:scale-[1.02] transition">
+                    <h3 class="text-2xl font-bold">B.E Information Science</h3>
+                    <p>VTU – VKIT</p>
+                    <p>CGPA: 7.8</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:scale-[1.02] transition">
+                    <h3 class="text-2xl font-bold">Pre University</h3>
+                    <p>Sri Chaitanya</p>
+                    <p>68%</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:scale-[1.02] transition">
+                    <h3 class="text-2xl font-bold">School</h3>
+                    <p>KVH</p>
+                    <p>78%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 px-8 lg:px-20 bg-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl text-center font-bold mb-16">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div
+                    class="bg-white/10 backdrop-blur-md border border-white/20 p-8 text-center rounded-2xl hover:scale-105 transition">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-indigo-500 rounded-xl flex items-center justify-center text-2xl font-bold">
+                        R
+                    </div>
+                    <h3 class="text-xl font-bold">ReactJS</h3>
+                    <p class="text-sm text-gray-300">Hooks & State Management</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-md border border-white/20 p-8 text-center rounded-2xl hover:scale-105 transition">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-purple-500 rounded-xl flex items-center justify-center text-2xl font-bold">
+                        T
+                    </div>
+                    <h3 class="text-xl font-bold">Tailwind CSS</h3>
+                    <p class="text-sm text-gray-300">Grid & Responsive Design</p>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-md border border-white/20 p-8 text-center rounded-2xl hover:scale-105 transition">
+                    <div
+                        class="w-20 h-20 mx-auto mb-4 bg-green-500 rounded-xl flex items-center justify-center text-2xl font-bold">
+                        J
+                    </div>
+                    <h3 class="text-xl font-bold">Java</h3>
+                    <p class="text-sm text-gray-300">OOP & Exception Handling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT BUTTON -->
+    <button id="modal-trigger"
+        class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full shadow-xl hover:scale-110 transition text-2xl">
+        ✉
+    </button>
+    <!-- MODAL -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-md">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div
+                class="bg-white text-gray-800 w-full max-w-md rounded-3xl shadow-2xl scale-95 opacity-0 transition-all duration-300">
+                <div class="border-b p-6 flex justify-between items-center">
+                    <h3 class="text-xl font-bold">Contact Me</h3>
+                    <button onclick="closeModal()" class="text-xl">&times;</button>
+                </div>
+                <form class="p-6 space-y-4">
+                    <input type="text" placeholder="Your Name"
+                        class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none">
+                    <input type="email" placeholder="Your Email"
+                        class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none">
+                    <textarea placeholder="Your Message"
+                        class="w-full border rounded-lg px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none"></textarea>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("contact-modal")
+            const content = modal.querySelector(".bg-white")
+            window.openModal = () => {
+                modal.classList.remove("hidden")
+                setTimeout(() => {
+                    content.classList.remove("opacity-0", "scale-95")
+                }, 10)
+            }
+            window.closeModal = () => {
+                content.classList.add("opacity-0", "scale-95")
+                setTimeout(() => {
+                    modal.classList.add("hidden")
+                }, 200)
+            }
+            document.getElementById("modal-trigger").addEventListener("click", openModal)
+        })
+    </script>
+</body>
+</html>
