@@ -13,3 +13,5 @@ try {
 } catch (error) {
     console.log("Third-party module 'lodash' is not installed.")
 }
+
+// installation of Lodash give generate a new file package.json,package-lock.json
