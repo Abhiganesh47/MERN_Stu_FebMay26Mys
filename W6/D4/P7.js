@@ -24,3 +24,6 @@ const server = http.createServer(function (req, res) {
 server.listen(3001,function(){
     console.log("Server is running at http://localhost:3001");
 });
+
+// comment Code:
+// http://localhost:3001/search?term=node & page=2
