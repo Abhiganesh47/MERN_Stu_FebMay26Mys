@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhiganesh Portfolio</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font -->
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="font-[Poppins] bg-gray-900 text-white scroll-smooth">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/10 backdrop-blur-lg border-b border-gray-700 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <a href="#"
+                class="text-2xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                AG
+            </a>
+
+            <ul class="hidden md:flex items-center gap-10">
+                <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+                <li><a href="#experience" class="hover:text-blue-400 transition">Experience</a></li>
+                <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle"
+                    class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 transition">
+                    Theme
+                </button>
+
+                <a href="#contact"
+                    class="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-2 rounded-lg shadow-lg hover:scale-105 transition">
+                    Let's Talk
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+        class="min-h-screen flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 py-20 gap-12 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+
+        <!-- LEFT -->
+        <div class="flex-1 text-center lg:text-left">
+
+            <h1
+                class="text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                Abhiganesh R
+            </h1>
+
+            <p id="typing-text" class="text-xl lg:text-2xl text-gray-300 font-semibold mb-8">
+                Full Stack Developer | MERN Stack
+            </p>
+
+            <div id="github-stats" class="text-sm mb-6"></div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+                <a href="#projects"
+                    class="bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-4 rounded-xl shadow-lg hover:scale-105 transition">
+                    View Projects
+                </a>
+
+                <a href="Abhiganesh_Resume.pdf"
+                    class="border border-gray-500 px-8 py-4 rounded-xl hover:bg-gray-800 transition">
+                    View Resume
+                </a>
+
+            </div>
+
+            <div class="mt-8 flex gap-6 justify-center lg:justify-start text-sm text-gray-400">
+                <span>79+ GitHub Commits</span>
+                <span>5 LeetCode Solved</span>
+                <span>10+ Projects</span>
+            </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="w-full max-w-sm">
+            <img src="pic.png"
+                class="rounded-2xl shadow-2xl hover:scale-105 transition duration-500 border-4 border-gray-700">
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 px-8 lg:px-16">
+
+        <div class="max-w-7xl mx-auto text-center">
+
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6">My Projects</h2>
+            <p class="text-gray-400 mb-10">
+                Modern full-stack applications with clean UI & performance
+            </p>
+
+            <!-- SEARCH -->
+            <input id="project-search" placeholder="Search projects..."
+                class="bg-gray-800 border border-gray-600 rounded-lg px-6 py-3 w-full max-w-md mb-6 text-white focus:ring-2 focus:ring-blue-500">
+
+            <!-- SORT -->
+            <div class="mb-10">
+                <select id="project-sort"
+                    class="bg-gray-800 border border-gray-600 px-4 py-2 rounded-lg text-white">
+                    <option value="default">Sort</option>
+                    <option value="name">Name</option>
+                    <option value="likes">Most Liked</option>
+                </select>
+            </div>
+
+            <!-- PROJECT GRID -->
+            <div id="projects-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24 text-center">
+        <h2 class="text-4xl font-bold mb-6">Education & Experience</h2>
+        <p class="text-gray-400">Coming soon...</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 px-8 lg:px-16 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-12">Skills</h2>
+            <div id="skills-container"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT BUTTON -->
+    <button id="modal-trigger"
+        class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-2xl text-2xl hover:scale-110 transition">
+        ☏
+    </button>
+
+    <!-- MODAL -->
+     
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-md">
+
+        <div class="flex items-center justify-center min-h-screen p-4">
+
+            <div id="modal-content" class="bg-white w-full max-w-md rounded-2xl shadow-2xl transition-all duration-300">
+
+                <div class="border-b p-8 bg-white relative">
+                    <h3 class="text-2xl font-bold">Contact Me</h3>
+                    <button id="modal-close" class="absolute top-6 right-6 text-2xl font-bold">×</button>
+                </div>
+
+                <form id="contact-form" class="p-8 space-y-4">
+
+                    <input id="contact-name" type="text" placeholder="Your name"
+                        class="w-full border rounded px-4 py-3">
+
+                    <input id="contact-email" type="email" placeholder="email@website.com"
+                        class="w-full border rounded px-4 py-3">
+
+                    <p id="form-message" class="text-sm text-red-500"></p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+
+                        <button type="button" id="form-cancel" class="flex-1 font-bold py-4 px-6">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="flex-1 font-bold py-4 px-6">
+                            Submit
+                        </button>
+
+                    </div>
+
+                    <!-- Copy Email -->
+                    <button type="button" id="copy-email" class="bg-blue-400 px-4 py-2 rounded w-full">
+                        Copy Email
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BACK TO TOP -->
+    <button id="backToTop"
+        class="fixed bottom-6 left-6 hidden bg-gray-800 px-4 py-2 rounded-lg shadow-lg hover:bg-gray-700 transition">
+        ↑
+    </button>
+
+    <!-- TOAST -->
+    <div id="toast"
+        class="fixed top-6 right-6 bg-green-500 px-6 py-3 rounded hidden">
+    </div>
+    
+    <!-- JS -->
+   <script src="js/data/projects.js"></script>
+     <script src="js/data/skills.js"></script>
+     <script src="js/data/education.js"></script>
+     <script src="js/data/about-me.js"></script>
+     <script src="js/features/about-me.js"></script>
+     <script src="js/features/typing-animation.js"></script>
+     <script src="js/features/skills-render.js"></script>
+     <script src="js/features/education.js"></script>
+     <script src="js/features/modal.js"></script>
+     <script src="js/features/contact-validation.js"></script>
+     <script src="js/features/theme-toggle.js"></script>
+     <script src="js/features/project-search.js"></script>
+     <script src="js/features/scroll-progress.js"></script>
+     <script src="js/features/scroll-spy.js"></script>
+     <script src="js/features/back-to-top.js"></script>
+     <script src="js/features/recently-viewed.js"></script>
+     <script src="js/features/dynamic-greeting.js"></script>
+     <script src="js/features/geolocation.js"></script>
+     <script src="js/main.js"></script>
+
+</body>
+</html>

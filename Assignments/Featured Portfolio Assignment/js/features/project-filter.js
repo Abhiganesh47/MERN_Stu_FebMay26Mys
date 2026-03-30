@@ -6,6 +6,7 @@ function initProjectFilter(){
         return;
     }
 
+    // =====Portfolio Project V3.0 assignment =======
     const categories = ["All", "MERN", "Frontend", "JavaScript"];
 
     categories.forEach(category => {

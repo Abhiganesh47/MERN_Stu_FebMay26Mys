@@ -48,7 +48,12 @@ function renderProjects(data){
     data.forEach(project => {
 
         const card = document.createElement("div");
-        card.className = "p-6 bg-white rounded-2xl shadow-lg";
+        // card.className = "p-6 bg-white rounded-2xl shadow-lg";
+        card.className = `
+        bg-gray-800 p-6 rounded-2xl shadow-lg 
+        hover:shadow-2xl hover:-translate-y-2 
+        transition duration-300 border border-gray-700
+        `;
 
         card.innerHTML = `
             <h3 class="text-xl font-bold mb-2">${project.name}</h3>
@@ -73,27 +78,6 @@ function renderProjects(data){
     });
 }
 
-
-// ===== SORT FEATURE =====
-const sortDropdown = document.getElementById("project-sort");
-
-if(sortDropdown){
-    sortDropdown.addEventListener("change", function(e){
-        let sorted = [...projectsData];
-
-        if(e.target.value === "name"){
-            sorted.sort((a,b)=> a.name.localeCompare(b.name));
-        }
-
-        if(e.target.value === "likes"){
-            sorted.sort((a,b)=> getLikes(b.id) - getLikes(a.id));
-        }
-
-        renderProjects(sorted);
-    });
-}
-
-
 // ===== TOAST =====
 function showToast(msg){
     const toast = document.getElementById("toast");
@@ -106,32 +90,6 @@ function showToast(msg){
     setTimeout(()=> toast.classList.add("hidden"),2000);
 }
 
-
-// ===== TYPING EFFECT =====
-const roles = ["Cloud Engineer","Game Developer","MERN Developer"];
-let i=0,j=0,del=false;
-
-function typing(){
-    const el = document.getElementById("typing-text");
-    if(!el) return;
-
-    let text = roles[i];
-
-    el.innerText = text.substring(0,j);
-
-    if(!del) j++; else j--;
-
-    if(j === text.length) del = true;
-    if(j === 0){
-        del = false;
-        i = (i+1)%roles.length;
-    }
-
-    setTimeout(typing, del ? 50 : 100);
-}
-typing();
-
-
 // ===== GITHUB API =====
 fetch("https://api.github.com/users/Abhiganesh47")
 .then(res => res.json())
@@ -142,6 +100,17 @@ fetch("https://api.github.com/users/Abhiganesh47")
     }
 });
 
+// =====Portfolio Project V3.0 assignment ======
+
+// ===== COPY EMAIL =====
+const copyBtn = document.getElementById("copy-email");
+
+if(copyBtn){
+    copyBtn.onclick = ()=>{
+        navigator.clipboard.writeText("your@email.com");
+        showToast("Email copied!");
+    }
+}
 
 // ===== BACK TO TOP =====
 const topBtn = document.getElementById("backToTop");
@@ -152,15 +121,4 @@ if(topBtn){
     });
 
     topBtn.onclick = ()=> window.scrollTo({top:0,behavior:"smooth"});
-}
-
-
-// ===== COPY EMAIL =====
-const copyBtn = document.getElementById("copy-email");
-
-if(copyBtn){
-    copyBtn.onclick = ()=>{
-        navigator.clipboard.writeText("your@email.com");
-        showToast("Email copied!");
-    }
 }
