@@ -24,3 +24,5 @@ app.get("/admin",checkAdminAccess,function(req,res){
 app.listen(4001,function(){
     console.log("Express server running at http://localhost:4001");
 });
+
+// Run:http://localhost:4001/admin?role=admin
