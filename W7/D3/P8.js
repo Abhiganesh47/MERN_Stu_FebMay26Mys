@@ -103,7 +103,7 @@ app.post("/refresh", function (req, res) {
         }, secretKey,
             {
                 expiresIn: "15m", //d:days,m:mins,h:hours
-                algorithms: "HS256",
+                algorithm: "HS256",
                 issuer: "jwt-example"
             }
         );
@@ -135,4 +135,4 @@ app.listen(4000,function(){
 
 
 // Running:  curl -X POST http://localhost:4000/login -H "Content-type:application/json" -d "{\"email\":\"email@email.com\",\"password\":\"pass@123\"}"
-// 
+// Running:curl -X POST http://localhost:4000/refresh -H "Content-type:application/json" -d "{\"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwMSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJpYXQiOjE3NzUxMTIwMzcsImV4cCI6MTc3NTk3NjAzNywiaXNzIjoiand0LWV4YW1wbGUifQ.NIH3U5SsZ96n8cC-pkYpDikHMBcYXv5XesAoic-I3ZE\"}"
