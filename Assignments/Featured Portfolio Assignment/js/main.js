@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
     initThemeToggle();
     initProjectSearch();
     initProjectFilter();
+    typing();
 
     renderProjects(projectsData);
 });
