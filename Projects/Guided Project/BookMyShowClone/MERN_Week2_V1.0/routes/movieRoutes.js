@@ -1,22 +1,28 @@
-// Handles request related to movies 
+// Handles requests related to movie
 const express = require("express");
-const {authMiddleware} = require("../middleware/authMiddleware");
-const {getHome,getAllMovies,getMovieById,addMovie,updateMovie,deleteMovie} = require("../controllers/movieController");
-
+const { authMiddleware } = require("../middleware/authMiddleware");
+const {
+    getHome,
+    getAllMovies,
+    getMovieById,
+    addMovie,
+    updateMovie,
+    deleteMovie
+} = require("../controllers/movieController");
 const roleMiddleware = require("../middleware/roleMiddleware");
 
 const router = express.Router();
-// get home : it will return a welcome message
-router.get("/",  getHome);
-// it will return all the  movies in the dataset
+//Sends req to home page
+router.get("/",getHome);
+//Sends req to get all movies
 router.get("/movies",getAllMovies);
-// get the movie details by id
-router.get("/movies/:id",getMovieById );
-// adding a new movie to dataset (only admin can add)
+//Sends req to get movies based on id
+router.get("/movies/:id",getMovieById);
+//Sends req to create new movie
 router.post("/movies",authMiddleware,roleMiddleware("admin"),addMovie);
-// updating the movie details by id (only admin can add)
+//Sends req to update movie detail/s
 router.put("/movies/:id",authMiddleware,roleMiddleware("admin"),updateMovie);
-// deleting the movie by id (only admin can add)
+//Sends req to delete a movie
 router.delete("/movies/:id",authMiddleware,roleMiddleware("admin"),deleteMovie);
 
 module.exports = router;

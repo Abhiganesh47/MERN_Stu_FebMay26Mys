@@ -16,22 +16,23 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(session({
-    secret:"secretKeyshhhdonttellanyone",
-       resave:false,
-       saveUninitialized:false,
-       cookie:{
-        secure:false,
-       httpOnly:true}
+app.use(
+    session({
+        secret:"secretKeyshhhdonttellanyone",
+        resave:false,
+        saveUnitialized:false,
+        cookie:{
+            secure:false,
+            httpOnly:true
+        }
     })
 );
 
 app.use(loggerMiddleware);
 app.use("/",movieRoutes);
-app.use("/auth",authRoutes,);
+app.use("/auth",authRoutes);
 app.use("/",bookingRoutes);
 app.use("/users",userRoutes);
 
 app.use(errorMiddleware);
-
 module.exports = app;
