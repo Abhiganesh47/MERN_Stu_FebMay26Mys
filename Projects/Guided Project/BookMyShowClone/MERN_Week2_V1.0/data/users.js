@@ -2,9 +2,9 @@
 const users = [
     {
         id:1,
-        name:"Mahesh",
+        name:"John",
         email:"u@e.com",
-        password:"mahi123",
+        password:"john123",
         role:"user"
     },
     {
