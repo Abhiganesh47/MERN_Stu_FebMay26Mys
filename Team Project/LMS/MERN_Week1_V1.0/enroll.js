@@ -1,37 +1,32 @@
-// 
 const courses = require("./courses");
-
-let enrolledCourses = [];
+const user = require("./user");
+const emitter = require("./events");
 
 function enrollCourse(courseId) {
-  const course = courses.find(c => c.id === courseId);
+  return new Promise((resolve, reject) => {
+    emitter.emit("enrollmentStarted");
 
-  if (!course) {
-    return "Course not found";
-  }
+    const course = courses.find(c => c.id == courseId);
 
-  const alreadyEnrolled = enrolledCourses.find(c => c.id === courseId);
-  if (alreadyEnrolled) {
-    return "Already enrolled in this course";
-  }
+    if (!course) {
+      emitter.emit("operationFailed", "Course not found");
+      return reject("Course not found");
+    }
 
-  enrolledCourses.push(course);
-  
-  return `Successfully enrolled in ${course.title}\n`;
-  
-}
+    const already = user.enrolledCourses.find(c => c.id == courseId);
+    if (already) {
+      emitter.emit("operationFailed", "Already enrolled");
+      return reject("Already enrolled");
+    }
 
-function viewEnrolledCourses() {
-  if (enrolledCourses.length === 0) {
-    console.log(" No courses enrolled yet.");
-    return;
-  }
+    user.enrolledCourses.push({
+      ...course,
+      completed: []
+    });
 
-  console.log("Your Enrolled Courses:");
-
-  enrolledCourses.forEach(course => {
-    console.log(`ID: ${course.id} - ${course.title}`);
+    emitter.emit("enrollmentConfirmed", course.title);
+    resolve("Enrollment successful");
   });
 }
 
-module.exports = {enrollCourse,viewEnrolledCourses};
+module.exports = { enrollCourse };

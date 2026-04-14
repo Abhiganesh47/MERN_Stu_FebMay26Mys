@@ -1,7 +1,18 @@
-// 
-const courses=[
-  {id:1,title:"Node.js Basics",lessons:["Intro","Modules","Async","Events"],category:"Programming"},
-  {id:2,title:"MongoDB",lessons:["", "Data Types", "Loops"],category:"Programming"},
-  {id: 3,title:"Web Technology",lessons:["Intro","Form & Input Fields", "Layouts", "FlexBox", "Grid"],category:"Web Development"}
+const courses = [
+  {
+    id: 1,
+    title: "JavaScript Basics",
+    instructor: "John",
+    lessons: ["Intro", "Variables", "Functions"],
+    category: "Programming"
+  },
+  {
+    id: 2,
+    title: "HTML & CSS",
+    instructor: "Smith",
+    lessons: ["HTML", "CSS", "Flexbox"],
+    category: "Web Development"
+  }
 ];
+
 module.exports = courses;
