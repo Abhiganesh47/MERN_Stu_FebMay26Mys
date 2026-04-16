@@ -33,17 +33,15 @@ rl.question("Enter your name: ", (name) => {
 
 
 function menu() {
-  console.log(chalk.blue(`
-LMS MENU 
-1. View All Courses
-2. View Course Details
-3. Enroll in Course
-4. View Enrolled Courses
-5. Mark Lesson Complete
-6. View Progress
-7. Withdraw Course
-8. Exit
-
+  console.log(chalk.blue(`LMS MENU 
+                          1. View All Courses
+                          2. View Course Details
+                          3. Enroll in Course
+                          4. View Enrolled Courses
+                          5. Mark Lesson Complete
+                          6. View Progress
+                          7. Withdraw Course
+                          8. Exit
 `));
 
   rl.question("Choose option: ", async (choice) => {
@@ -133,3 +131,5 @@ LMS MENU
     menu();
   });
 }
+
+menu();
