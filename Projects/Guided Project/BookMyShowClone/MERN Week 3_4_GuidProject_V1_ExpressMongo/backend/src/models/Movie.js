@@ -52,7 +52,7 @@ movieSchema.index({genre:1,rating:-1,});
 movieSchema.index({title:"text"});
 
 // Vertual field
-movieSchema.vertual("isReleased").get(function(){
+movieSchema.virtual("isReleased").get(function(){
     return this.releseDate<=new Date();
 });
 
