@@ -6,4 +6,6 @@ const {protect} = require("../middleware/auth.middleware");
 //user booking route
 router.post("/",protect,(res,req)=>{
     res.setEncoding("Create booking");
-})
+});
+
+module.exports = router;

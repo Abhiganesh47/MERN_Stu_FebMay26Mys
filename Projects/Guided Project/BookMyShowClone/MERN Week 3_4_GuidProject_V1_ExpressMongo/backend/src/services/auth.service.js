@@ -1,12 +1,12 @@
 const User = require("../models/User");
 const OTP = require("../models/OTP");
 const otpService = require("./otp.service");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-//Register user
-exports.registerUser = async ({ name, email, password }) => {
-    const existingUser = await User.findOne({ email });
+// Register user
+exports.registerUser = async ({name,email,password}) =>{
+    const existingUser = await User.findOne({email});
 
     if (existingUser) {
         throw new Error("User already exists");
@@ -15,46 +15,46 @@ exports.registerUser = async ({ name, email, password }) => {
     const user = await User.create({
         name,
         email,
-        password
+        password,
     });
 
     await otpService.generateOTP(email);
 
-    return { email: user.email };
+    return {email:user.email};
 };
 
 //Verify OTP
-exports.verifyOTP = async ({ email, otp }) => {
-    const record = await OTP.findOne({ email }).select("+otp");
+exports.verifyOTP = async({email,otp})=>{
+    const record = await OTP.findOne({email}).select("+otp");
 
     if (!record) {
         throw new Error("OTP expired or not found");
     }
 
-    const isMatch = await bcrypt.compare(otp, record.otp);
+    const isMatch = await bcrypt.compare(otp,record.otp);
 
     if (!isMatch) {
-        record.attempts += 1;
+        record.attempts +=1;
         await record.save();
         throw new Error("Invalid OTP");
     }
 
-    await User.updateOne({ email }, { isVerified: true });
+    await User.updateOne({email},{isVerified:true});
     return true;
 };
 
-//Login 
+// Login
 exports.loginUser = async ({email,password}) =>{
     const user = await User.findOne({email}).select("+password");
 
     if (!user) {
         throw new Error("User not found");
     }
-    if(!user.isVerified){
+    if (!user.isVerified) {
         throw new Error("User not verified");
     }
-
-    const isMatch = await user.comparePassword(password); 
+    const isMatch = await bcrypt.compare(password,user.password);
+    // const isMatch = await User.comparePassword(password);
 
     if (!isMatch) {
         throw new Error("Invalid credentials");
@@ -66,11 +66,11 @@ exports.loginUser = async ({email,password}) =>{
         {expiresIn:"1d"}
     );
 
-    return(
-        {token,
+    return{
+        token,
         user:{
             id:user._id,
             role:user.role,
-        },}
-    );
-}
+        },
+    };
+};
