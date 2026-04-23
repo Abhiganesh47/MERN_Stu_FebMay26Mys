@@ -107,7 +107,7 @@ exports.cancelBooking = async (bookingId,userId) => {
     });
     //3. Update available seats
     show.availableSeats += booking.seats.length;
-    await shhow.save();
+    await show.save();
 
     //4. Update booking
     booking.status = "cancelled";
