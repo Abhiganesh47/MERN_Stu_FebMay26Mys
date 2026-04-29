@@ -2,8 +2,10 @@ import './App.css'
 import { PropBasics } from './components/P1'
 import { PropDestructuring } from './components/P2'
 import { PropsChildren } from './components/P3';
-import {PropDrillingDemo} from './components/P4.jsx'
-import { SharedStateParent } from './components/P5.jsx';
+import {PropDrillingDemo} from './components/P4'
+import { SharedStateParent } from './components/P5';
+import { CompositionDemo } from './components/P6';
+import { ObjectsAndArryProps } from './components/P7';
 function App() {
   return (
     <>
@@ -11,7 +13,9 @@ function App() {
       {/* <PropDestructuring/> */}
       {/* <PropsChildren/> */}
       {/* <PropDrillingDemo/> */}
-      <SharedStateParent/>
+      {/* <SharedStateParent/> */}
+      {/* <CompositionDemo/> */}
+      <ObjectsAndArryProps/>
     </>
   );
 }
