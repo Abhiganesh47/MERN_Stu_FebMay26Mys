@@ -21,11 +21,11 @@ function App() {
       {/* <SharedStateParent/> */}
       {/* <CompositionDemo/> */}
       {/* <ObjectsAndArryProps/> */}
-    {/* <PropsImmutability/> */}
-    {/* <PropsState/> */}
-    {/* <FunctionProps/> */}
-    {/* <PropTypesDemo/> */}
-    <HOCExample/>
+      {/* <PropsImmutability/> */}
+      {/* <PropsState/> */}
+      {/* <FunctionProps/> */}
+      {/* <PropTypesDemo/> */}
+      {/* <HOCExample/> */}
     </>
   );
 }
