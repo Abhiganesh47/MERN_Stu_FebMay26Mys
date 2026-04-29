@@ -9,6 +9,7 @@ import { ObjectsAndArryProps } from './components/P7';
 import { PropsImmutability } from './components/P8';
 import { PropsState } from './components/P9';
 import { FunctionProps } from './components/P10';
+import { PropTypesDemo } from './components/P11';
 function App() {
   return (
     <>
@@ -21,7 +22,8 @@ function App() {
       {/* <ObjectsAndArryProps/> */}
     {/* <PropsImmutability/> */}
     {/* <PropsState/> */}
-    <FunctionProps/>
+    {/* <FunctionProps/> */}
+    <PropTypesDemo/>
     </>
   );
 }
