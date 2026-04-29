@@ -9,7 +9,7 @@ function Profile({ name, age }) {
     )
 }
 
-Profile.PropTypes = {
+Profile.propTypes = {
     name: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired
 };
