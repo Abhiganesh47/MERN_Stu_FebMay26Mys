@@ -1,39 +1,36 @@
-import React from "react";
-//Prop drilling 
-function DrillLayout(user){
+import { React } from "react";
+// Prop drilling
+function DrillLayout({ user }){
     return(
         <div className="layout">
-            <DrillSidebar user={user} />
+            <DrillSidebar user={user}/>
         </div>
     )
 }
-
-function DrillSidebar({user}){
+function DrillSidebar({ user }){
     return(
         <aside className="sidebar">
-            <DrillUserPanel user={user}/>
+            <DrillUserPanel user={user} />
         </aside>
     )
 }
-
 function DrillUserPanel({user}){
     return(
         <section className="user-panel">
-            <ProfileAvatar user={user}/>
+            <ProfileAvatar user={user} />
         </section>
     )
 }
-
-function ProfileAvatar({ user}){
-    return<img src={`/${user.name}.png`} alt={user.name}/>
+function ProfileAvatar({ user }){
+    return <img src={`/${user.name}.png`} alt={user.name} />
 }
 
 export function PropDrillingDemo(){
-    const user = {name:'Abhi'}
+    const user = {name: 'hero'};
     return(
         <div>
-            <h3>Problem : prop drilling</h3>
-            <DrillLayout user={user}/>
+            <h3>Problem: prop drilling</h3>
+            <DrillLayout user={user} />
         </div>
     )
 }
