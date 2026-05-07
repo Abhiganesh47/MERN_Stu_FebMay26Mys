@@ -1,3 +1,4 @@
+// Stop event Propagation
 export function EventObj(){
     const handleParentClick = (event)=>{
         alert(`Parent clicked target: ${event.target.tagName} currentTarget:${event.currentTarget.tagName}`);
