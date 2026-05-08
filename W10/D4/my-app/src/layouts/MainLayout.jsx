@@ -1,4 +1,4 @@
-import {Navlink,Outlet} from "react-router-dom";
+import {NavLink,Outlet} from "react-router-dom";
 // NavLink: used for navigation b/w pages/routes
 // Outlet: used to display child rout components inside the layout
 
