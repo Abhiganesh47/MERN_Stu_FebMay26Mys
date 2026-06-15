@@ -60,7 +60,7 @@ export default function ProtectedRoute({
     user,
   } = useAuth();
 
-
+  const location = useLocation();
   /*
   ------------------------------------------------
   SESSION RESTORATION IN PROGRESS
@@ -81,8 +81,15 @@ export default function ProtectedRoute({
 
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
+  return (
+    <Navigate
+      to="/login"
+      replace
+      state={{ from: location }}
+    />
+  );
+}
+
 
 
   /*

@@ -1,8 +1,14 @@
 // src/routes/AppRoutes.jsx
+
+
 /*
 =========================================================
 SPRINT 1 – ROUTING BRAIN
+
+
 TOPICS COVERED:
+
+
 ✓ React Router v7
 ✓ Routes
 ✓ Route
@@ -13,11 +19,17 @@ TOPICS COVERED:
 ✓ Protected Routes
 ✓ 404 Routing
 
+
 WHY THIS FILE?
+
+
 AppRoutes.jsx is the routing brain
 of the entire application.
 
+
 Responsibilities:
+
+
 URL
 ↓
 Match Route
@@ -28,37 +40,59 @@ Load Page
 ↓
 Render UI
 
+
 Without this file:
+
+
 ✓ Navigation breaks
 ✓ Protected routes break
 ✓ Nested routes break
 ✓ 404 handling breaks
+
+
 =========================================================
 */
+
+
 import { lazy, Suspense } from "react";
+
+
 import { Routes, Route, Navigate } from "react-router-dom";
+
+
 /*
 =========================================================
 SHARED COMPONENTS
 =========================================================
 */
+
+
 import LoadingSpinner from "../components/LoadingSpinner";
 import ProtectedRoute from "../components/ProtectedRoute";
+
+
 /*
 =========================================================
 LAYOUTS
+
+
 Layouts define common UI structure.
+
+
 PublicLayout
 ↓
 Navbar
 ↓
 Outlet
 
+
 AdminLayout
 ↓
 Admin Sidebar
 ↓
 Outlet
+
+
 =========================================================
 */
 
@@ -220,15 +254,18 @@ export default function AppRoutes() {
 
         =================================================
         */}
-	  
+
+
         <Route
+          path="/bookings"
           element={
             <ProtectedRoute>
               <Bookings />
             </ProtectedRoute>
           }
         />
-         
+
+
         {/*
         =================================================
         ADMIN ROUTES
@@ -245,14 +282,14 @@ export default function AppRoutes() {
         */}
 
 
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRoute roles={["admin"]}>
-                <AdminLayout />
-              </ProtectedRoute>
-            }
-          >
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute requiredRole="admin">
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
           {/*
           ===============================================
           INDEX ROUTE
