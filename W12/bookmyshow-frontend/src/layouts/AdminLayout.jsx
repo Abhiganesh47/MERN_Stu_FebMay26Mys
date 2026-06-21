@@ -54,6 +54,13 @@ export default function AdminLayout() {
           >
             Movies
           </NavLink>
+          <NavLink
+            to="/admin/shows"
+            style={getNavStyle}
+          >
+            Shows
+          </NavLink>
+
         </nav>
       </aside>
       {/*
