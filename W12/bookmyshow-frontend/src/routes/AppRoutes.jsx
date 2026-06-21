@@ -245,25 +245,7 @@ export default function AppRoutes() {
 
 
           <Route path="/signup" element={<Signup />} />
-        </Route>
-
-
-        {/*
-        =================================================
-        USER ROUTES
-
-
-        Sprint 1 uses mock protection.
-
-
-        Real authentication arrives
-        in Sprint 2.
-
-
-        =================================================
-        */}
-
-
+          
         <Route
           path="/bookings"
           element={
@@ -282,6 +264,23 @@ export default function AppRoutes() {
           }
         />
 
+        </Route>
+
+
+        {/*
+        =================================================
+        USER ROUTES
+
+
+        Sprint 1 uses mock protection.
+
+
+        Real authentication arrives
+        in Sprint 2.
+
+
+        =================================================
+        */}
 
 
         {/*
